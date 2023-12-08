@@ -5,9 +5,15 @@
 
 Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
 
+cd 20231208_vcod_git_eval
+git commit -m "CO"
 
 ### 1- Essai de 'PR' 
-
+1 - echo Rosette-Michèle OTOUNGA > CONTRIBUTORS.md
+2- git add CONTRIBUTORS.md 
+ - git commit -m "C1"
+3- git push --all
+4- 
 ### 2- Configuration
 
 ### 3- Branche 'DEV'
