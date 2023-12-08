@@ -7,9 +7,23 @@ Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands
 
 
 ### 1- Essai de 'PR' 
-
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
 ### 2- Configuration
+git config --local alias.s "status -s"
+git config --local alias.l "log --graph --oneline"
+git config --local alias.ci "commit"
+git config --local alias.br "branch"
+git add Commands.txt
+git commit -m "C2"
+git push
 
+git config --local user.name "Cyprien Pascal"
+git config --local user.email "cyprien31pascal@gmail.com"
+git add Commands.txt
+git ci -m "C3"
+git push
 ### 3- Branche 'DEV'
 
 ### 4- Merge
