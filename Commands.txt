@@ -14,6 +14,12 @@ git add CONTRIBUTORS.md
 git commit -m "C1"
 ### 2- Configuration
 
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.l "log --graph --oneline"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
+
+
 ### 3- Branche 'DEV'
 
 ### 4- Merge
