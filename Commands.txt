@@ -13,8 +13,17 @@ git commit -m "CO"
 2- git add CONTRIBUTORS.md 
  - git commit -m "C1"
 3- git push --all
-4- 
+4- pull request bien ouverte 
+
 ### 2- Configuration
+
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.l "log --graph --oneline"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
+
+git add Commands.txt
+git commit -m "C2"
 
 ### 3- Branche 'DEV'
 
