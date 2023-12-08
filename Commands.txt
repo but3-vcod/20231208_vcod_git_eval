@@ -17,6 +17,8 @@ git commit -m "CO"
 
 ### 2- Configuration
 
+1- insérer les commandes git pour créer les alias suivants
+
 git config --get-regexp alias.s "status -s"
 git config --get-regexp alias.l "log --graph --oneline"
 git config --get-regexp alias.ci "commit"
@@ -24,6 +26,9 @@ git config --get-regexp alias.br "branch"
 
 git add Commands.txt
 git commit -m "C2"
+
+git config --global user.name "petitSoley"
+git config --global user.mail "orosettemichele@gmail.com"  
 
 ### 3- Branche 'DEV'
 
