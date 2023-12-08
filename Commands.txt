@@ -36,4 +36,10 @@ git switch main
 echo >> package.json
 git add package.json
 git ci -m "C4"
+git merge dev -m "C5"
 ### 5- Detached HEAD
+git ci -m "C6"
+git checkout e83985a
+echo "hello word" >> MANIFEST.xml
+git add MANIFEST.xml
+
