@@ -7,7 +7,11 @@ Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands
 
 
 ### 1- Essai de 'PR' 
+echo  "victor Patfoort" >> CONTRIBUTORS.md
 
+git add CONTRIBUTORS.md
+
+git commit -m "C1"
 ### 2- Configuration
 
 ### 3- Branche 'DEV'
