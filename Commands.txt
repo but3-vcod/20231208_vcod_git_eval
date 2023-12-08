@@ -26,11 +26,14 @@ git config --global user.email "votre@email.com"
 
 ### 3- Branche 'DEV'
 git branch dev
-echo "" >> requirements.txt
+echo >> requirements.txt
 git ci -m “C31”
 git add requirements.txt
 git ci -m "C32"
 
 ### 4- Merge
-
+git switch main
+echo >> package.json
+git add package.json
+git ci -m "C4"
 ### 5- Detached HEAD
