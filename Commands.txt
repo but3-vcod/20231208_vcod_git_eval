@@ -7,6 +7,18 @@ Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands
 
 
 ### 1- Essai de 'PR' 
+# Forker le dépôt
+git clone https://github.com/vckd/20231208_vckd_git_eval.git
+cd eval_git
+# Vérifier la branche active
+git branch
+# Insérer mon nom dans le fichier CONTRIBUTORS.md
+echo "mamadou" >> CONTRIBUTORS.md
+# Committer les modifications
+git add CONTRIBUTORS.md
+git commit -m "C1
+# Envoyer les modifications sur mon dépôt GitHub
+git push origin main
 
 ### 2- Configuration
 
