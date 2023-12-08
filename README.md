@@ -3,6 +3,7 @@
 
 ### Règles du jeu
 
+coucou
 1. l'épreuve dure 1h15
 1. une bonne réponse rapporte 1pt
 1. une demande d'aide coûte 1pt
