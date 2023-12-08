@@ -20,6 +20,10 @@ git config --get-regexp alias.ci "commit"
 git config --get-regexp alias.br "branch"
 
 
+git config --global user.name "VotreNomUtilisateur"
+git config --global user.email "votre@email.com"
+
+
 ### 3- Branche 'DEV'
 
 ### 4- Merge
