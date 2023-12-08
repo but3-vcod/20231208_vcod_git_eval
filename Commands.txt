@@ -21,8 +21,45 @@ git commit -m "C1
 git push origin main
 
 ### 2- Configuration
+# Créer les alias
+git config --global alias.s status -s
+git config --global alias.l log --graph --oneline
+git config --global alias.ci commit
+git config --global alias.br branch
+
+# Committer les modifications
+git add Commands.txt
+git commit -m "C2"
+
+# Ajouter votre nom d'utilisateur
+git config --global user.name "Mamadou"
+
+# Ajouter votre adresse e-mail
+git config --global user.email "Mamadoudahirousy@gmail.com"
+# Committer les modifications
+git add Commands.txt
+git commit -m "C3"
+# Pousser les modifications sur GitHub
+git push origin main
 
 ### 3- Branche 'DEV'
+# Créer la branche DEV
+git checkout -b DEV
+# Committer les modifications
+git add requirements.txt
+git commit -m "C31"
+
+# Remplir le fichier requirements.txt
+echo "python-dotenv" >> requirements.txt
+echo "requests" >> requirements.txt
+echo "pandas" >> requirements.txt
+
+# Committer les modifications
+git add requirements.txt
+git commit -m "C32"
+
+# Pousser les modifications sur GitHub
+git push origin DEV
 
 ### 4- Merge
 
