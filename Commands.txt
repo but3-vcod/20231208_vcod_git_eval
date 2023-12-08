@@ -6,12 +6,53 @@
 Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
 
 
-### 1- Essai de 'PR' 
+### 1- Essai de 'PR'
+
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push 
 
 ### 2- Configuration
+git config --local alias.s "status -s"
+git config --local alias.l "log --graph --oneline"
+git config --local alias.ci "commit"
+git config --local alias.br "branch"
+git add Commands.txt
+git commit -m "C2"
+git push
+git config --local user.name mouhcine11555"
+git config --local user.email "mouhcinemaimouni@gmail.com"
+git add Commands.txt
+git ci -m "C3"
+git push
 
 ### 3- Branche 'DEV'
-
+git br "DEV"
+git switch DEV
+git add requirements.txt
+git ci -m "C31"
+git add requirements.txt
+git ci -m "C32"
+git push --set-upstream origin DEV
 ### 4- Merge
-
+git switch main
+echo >> package.json
+git add package.json
+git ci -m "C4"
+git merge DEV -m "C5"
+git push
 ### 5- Detached HEAD
+
+git add requirements.txt
+git ci -m "C6"
+git checkout b82632b7d31c27ae204096af2381f408ea169f1d
+git ci -m "D51"
+git add MANIFEST.xml
+git ci -m "D52"
+git branch "detached"
+git push origin HEAD:main
+
+###6 push commands
+git add Commands.txt
+git ci -m "Dernier commit"
+git push
