@@ -1,0 +1,8 @@
+Commande ECHO activée.
+<<<<<<< HEAD
+l
+lo
+lou
+=======
+Commande ECHO activée.
+>>>>>>> DEV

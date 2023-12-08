@@ -5,10 +5,29 @@
 
 Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
 
+git clone https://github.com/louis4709/20231208_vcod_git_eval.git
+cd 20231208_vcod_git_eval
+git branch
 
 ### 1- Essai de 'PR' 
+echo "Chareton">>CONTRIBUTORS.md
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
+  ->louis.chareton11@gmail.com
+  ->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
 
 ### 2- Configuration
+
+
+git config --global user.name "louisC"
+git config --global user.email "louis.chareton11@gmail.com"
+
+git add Commands.txt
+git commit -m "C3"
+	
+
+
 
 ### 3- Branche 'DEV'
 
