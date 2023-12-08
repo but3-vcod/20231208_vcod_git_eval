@@ -7,10 +7,29 @@ Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands
 
 
 ### 1- Essai de 'PR' 
+echo  "victor Patfoort" >> CONTRIBUTORS.md
 
+git add CONTRIBUTORS.md
+
+git commit -m "C1"
 ### 2- Configuration
 
+git config --global alias.s "status -s"
+git config --global alias.l "log --graph --oneline"
+git config --global alias.ci "commit"
+git config --global alias.br "branch"
+
+
+git config --global user.name "VotreNomUtilisateur"
+git config --global user.email "votre@email.com"
+
+
 ### 3- Branche 'DEV'
+git branch dev
+echo >> requirements.txt
+git ci -m “C31”
+git add requirements.txt
+git ci -m "C32"
 
 ### 4- Merge
 
