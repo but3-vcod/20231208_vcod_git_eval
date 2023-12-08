@@ -18,6 +18,12 @@ git config --local alias.br "branch"
 git add Commands.txt
 git commit -m "C2"
 git push
+
+git config --local user.name "Cyprien Pascal"
+git config --local user.email "cyprien31pascal@gmail.com"
+git add Commands.txt
+git ci -m "C3"
+git push
 ### 3- Branche 'DEV'
 
 ### 4- Merge
