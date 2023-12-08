@@ -24,14 +24,56 @@ git config --get-regexp alias.l "log --graph --oneline"
 git config --get-regexp alias.ci "commit"
 git config --get-regexp alias.br "branch"
 
-git add Commands.txt
-git commit -m "C2"
+2- git add Commands.txt
+   git commit -m "C2"
 
+4- 
 git config --global user.name "petitSoley"
 git config --global user.mail "orosettemichele@gmail.com"  
 
+5- git add Commands.txt
+   git commit -m "C3"
+
 ### 3- Branche 'DEV'
 
+1- C:\Users\motounga\20231208_vcod_git_eval>git branch DEV
+2- C:\Users\motounga\20231208_vcod_git_eval>git add requirements.txt.txt
+
+3- C:\Users\motounga\20231208_vcod_git_eval>git commit -m "C31"
+
+4- C:\Users\motounga\20231208_vcod_git_eval> echo evaluation > requirements.txt.txt
+
+5- C:\Users\motounga\20231208_vcod_git_eval>git add requirements.txt.txt
+   C:\Users\motounga\20231208_vcod_git_eval>git commit -m "C32"
+ 
 ### 4- Merge
 
+1- git switch main
+  -C:\Users\motounga\20231208_vcod_git_eval> echo "" > package.json
+2 -C:\Users\motounga\20231208_vcod_git_eval>git add package.json
+  -C:\Users\motounga\20231208_vcod_git_eval>git commit -m "C4"
+
+3 -C:\Users\motounga\20231208_vcod_git_eval>git merge DEV -m "C5"
+Already up to date.
+
 ### 5- Detached HEAD
+
+1- C:\Users\motounga\20231208_vcod_git_eval>echo "dependance !!" > requirements.txt
+2- C:\Users\motounga\20231208_vcod_git_eval>git add requirements.txt
+3- C:\Users\motounga\20231208_vcod_git_eval>git commit -m "C5"
+
+4- C:\Users\motounga\20231208_vcod_git_eval>git add Manifest.xml
+
+5- C:\Users\motounga\20231208_vcod_git_eval>git commit -m "D51"
+
+
+6- C:\Users\motounga\20231208_vcod_git_eval>git add Manifest.xml
+ - C:\Users\motounga\20231208_vcod_git_eval>git commit -m "D52"
+7- git branch "detached"
+
+
+###6 push commands
+git add Commands.txt
+git ci -m "Dernier commit"
+git push
+
