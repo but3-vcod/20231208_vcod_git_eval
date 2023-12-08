@@ -7,8 +7,18 @@ Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands
 
 
 ### 1- Essai de 'PR' 
+git clone git@github.com:Nicopras720295/20231208_vcod_git_eval.git vcod
+cd vcod
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push --all
 
 ### 2- Configuration
+
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.l "log --graph --oneline"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
 
 ### 3- Branche 'DEV'
 
