@@ -16,9 +16,16 @@ git push
 ### 2- Configuration
 
 git config --global alias.s status
-git config --global alias.l log --graph --oneline
+git config --get-regexp alias.l "log --graph --oneline"
 git config --global alias.ci commit
 git config --global alias.br branch
+git add Commands.txt
+git ci -m "C2"
+
+
+git config user.email "reytorrecillas.lucas@gmail.com"
+git config --global user.name "Lucas"
+
 
 
 ### 3- Branche 'DEV'
