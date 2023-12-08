@@ -5,10 +5,19 @@
 
 Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
 
-
 ### 1- Essai de 'PR' 
 
+echo "Lucas Rey Torrecillas">> CONTRIBUTORS.md
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
+
+
 ### 2- Configuration
+
+
+git config --global --replace-all alias.s "status-s" 
+git config --global --replace-all alias.s "status-s" 
 
 ### 3- Branche 'DEV'
 
