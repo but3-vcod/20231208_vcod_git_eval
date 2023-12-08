@@ -18,14 +18,14 @@ git push
   ->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
 
 ### 2- Configuration
-git config --get-regexp alias.s "status -s"
-git config --get-regexp alias.l "log --graph --oneline"
-git config --get-regexp alias.ci "commit"
-git config --get-regexp alias.br "branch"
+
+
+git config --global user.name "louisC"
+git config --global user.email "louis.chareton11@gmail.com"
 
 git add Commands.txt
-git commit -m "C2"
-
+git commit -m "C3"
+	
 
 
 
