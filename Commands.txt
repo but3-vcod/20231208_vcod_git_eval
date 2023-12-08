@@ -15,9 +15,11 @@ git push
 
 ### 2- Configuration
 
+git config --global alias.s status
+git config --global alias.l log --graph --oneline
+git config --global alias.ci commit
+git config --global alias.br branch
 
-git config --global --replace-all alias.s "status-s" 
-git config --global --replace-all alias.s "status-s" 
 
 ### 3- Branche 'DEV'
 
