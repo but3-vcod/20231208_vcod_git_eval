@@ -1,0 +1,86 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+### 1- Essai de 'PR' 
+
+echo "Lucas Rey Torrecillas">> CONTRIBUTORS.md
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
+
+> rhi: ok C1
+
+
+### 2- Configuration
+
+git config --global alias.s status
+git config --get-regexp alias.l "log --graph --oneline"
+git config --global alias.ci commit
+git config --global alias.br branch
+git add Commands.txt
+git ci -m "C2"
+
+
+git config user.email "reytorrecillas.lucas@gmail.com"
+git config --global user.name "Lucas"
+git add Commands.txt
+git ci -m "C3"
+git push
+
+
+> rhi: commandes alias ok, commandes user ok, C1 et C2 ok
+
+### 3- Branche 'DEV'
+
+git branch dev
+git switch dev
+echo  > requirement.txt
+git add requirement.txt
+git commit -m "C31"
+git push
+git push --set-upstream origin dev
+
+> rhi: ok branch dev, ok commits C31 et C32
+
+### 4- Merge
+
+git switch main
+echo >> package.json
+git add package.json
+git ci -m "C4"
+git merge DEV -m "C5"
+git push
+
+> rhi: ok C4, ok merge dev dans main avec message C5
+
+### 5- Detached HEAD
+
+git add requirement.txt
+git ci -m "C6"
+git checkout 64f923299a1eecb6b5a8e620de57f00b3e74b502
+echo >> MANIFEST.xml
+git add MANIFEST.xml
+git ci -m "D51"
+git ci -m "D52"
+git branch "detached"
+git push origin HEAD:main
+
+> rhi: ok  pour C6 , mais je ne comprends pas comment la
+> branche detached contient C6 au lieu de partir de C5.
+>
+>
+>  Au final,    C'est dommage de lancer `git push origin HEAD:main` 
+>  car ça envoie sur le main distant la branche dans
+>  laquelle on se trouve, peut etre detached dans ce cas,
+>  mais je ne peux pas savoir
+
+### 6 -  Commiter et pusher le fichier Commands.txt
+
+git switch main
+git add Commands.txt
+git ci -m "Dernier commit"
+git push

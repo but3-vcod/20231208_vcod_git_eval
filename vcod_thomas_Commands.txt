@@ -1,0 +1,100 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+
+git clone https://github.com/talmodovar/20231208_vcod_git_eval
+cd 20231208_vcod_git_eval
+echo "talmodovar">> CONTRIBUTORS.md
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
+
+rhi: ok
+
+### 2- Configuration
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
+
+
+git add Commands.txt
+git commit -m "C2"
+git push
+
+
+git config --global user.name "talmodovar"
+git config --global user.email "almodovar150@gmail.com"
+
+git add Commands.txt
+git commit -m "C3"
+git push
+
+rhi: ok
+
+### 3- Branche 'DEV'
+
+git branch dev
+echo >> requirements.txt
+git add requirements.txt
+git commit -m "C31"
+git push
+git push --set-upstream origin dev
+
+git switch dev
+
+rhi: il aurait fallut faire le 'switch' juste après le 'branch'
+
+git add requirements.txt
+git commit -m "C32"
+git push
+
+rhi: l'ordre des commandes n'est pas le bon, mais on
+rhi: retrouve quand même les commits "C31" et "C32" dans la
+rhi: branche -> moitié des points
+
+### 4- Merge
+
+git switch main
+git add package.json
+git commit -m "C4"
+git push
+
+rhi: ok
+
+git merge DEV -m "C5"
+git push
+
+rhi: la commande est bonne mais rien de tel dans l'historique
+
+### 5- Detached HEAD
+
+git switch main
+git add requirements.txt
+git commit -m "C6"
+git push
+
+rhi: le commit C6 existe mais est le commit de merge avec
+rhi: DEV ...  bizarre
+
+git chekout e571f052440babe9781a049c4753ec92c4cd4659
+echo >> MANIFEST.xml
+git add MANIFEST.xml
+git commit -m "D51"
+git push
+
+git add MANIFEST.xml
+git commit -m "D52"
+git push
+
+rhi: il y a bien un commit D51 qui part de main (C6 au lieu de C5
+rhi: mais pas de commit D52
+
+git branch "detached"
+git push origin HEAD:main
+

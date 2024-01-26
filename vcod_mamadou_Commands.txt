@@ -1,0 +1,143 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+# Forker le dépôt
+git clone https://github.com/vckd/20231208_vckd_git_eval.git
+cd eval_git
+
+# Vérifier la branche active
+git branch
+
+# Insérer mon nom dans le fichier CONTRIBUTORS.md
+echo "mamadou" >> CONTRIBUTORS.md
+# Committer les modifications
+git add CONTRIBUTORS.md
+git commit -m "C1
+# Envoyer les modifications sur mon dépôt GitHub
+git push origin main
+
+rhi: ok
+
+### 2- Configuration
+# Créer les alias
+git config --global alias.s status -s
+git config --global alias.l log --graph --oneline
+git config --global alias.ci commit
+git config --global alias.br branch
+
+rhi: très bien
+
+# Committer les modifications
+git add Commands.txt
+git commit -m "C2"
+
+rhi: ok mais je ne retrouve pas ce commit dans l'historique
+
+# Ajouter votre nom d'utilisateur
+git config --global user.name "Mamadou"
+
+# Ajouter votre adresse e-mail
+git config --global user.email "Mamadoudahirousy@gmail.com"
+
+# Committer les modifications
+git add Commands.txt
+git commit -m "C3"
+
+# Pousser les modifications sur GitHub
+git push origin main
+
+
+rhi: bon pour moi
+
+### 3- Branche 'DEV'
+# Créer la branche DEV
+git checkout -b DEV
+
+# Committer les modifications
+git add requirements.txt
+git commit -m "C31"
+
+
+rhi: ok
+
+# Remplir le fichier requirements.txt
+echo "python-dotenv" >> requirements.txt
+echo "requests" >> requirements.txt
+echo "pandas" >> requirements.txt
+
+# Committer les modifications
+git add requirements.txt
+git commit -m "C32"
+
+# Pousser les modifications sur GitHub
+git push origin DEV
+
+### 4- Merge
+# Committer les modifications
+git add package.json
+git commit -m "C4"
+
+rhi: ok mais ce devait être commité sur la branche "main"
+
+# Fusionner la branche DEV dans la branche main
+git merge origin/DEV
+
+rhi: non, le commit de merge devait s'appeler C5
+
+# Pousser les modifications sur GitHub
+git push origin main
+
+### 5- Detached HEAD
+
+# Assurez-vous d'être sur la branche 'main'
+git checkout main
+
+# Ajoutez la dépendance dans "requirements.txt"
+echo 'ma dependance' >> requirements.txt
+
+# Ajoutez le fichier au suivi de Git
+git add requirements.txt
+
+# Committez avec le message "C6"
+git commit -m "C6"
+
+# Assurez-vous d'être sur la branche 'main'
+git checkout main
+
+# Réinitialisez HEAD au commit "C5"
+git reset --hard C5
+
+rhi: Alors oui, la consigne n'est peut etre pas claire, mais
+le schémas l'est. il fallait faire 
+
+    git checkout C5
+
+echo '<xml>Contenu de votre choix</xml>' > MANIFEST.xml
+# Ajoutez le fichier au suivi de Git
+git add MANIFEST.xml
+# Committez avec le message "D51"
+git commit -m "D51"
+
+rhi: ok mais le commit doit partir de C5 comme indiqué sur le schémas
+
+# Faites un autre commit avec le message "D52"
+# Vous pouvez ajouter/modifier quelque chose dans le fichier MANIFEST.xml
+echo '<xml>Autre contenu</xml>' > MANIFEST.xml
+git add MANIFEST.xml
+git commit -m "D52"
+
+rhi: malheureusement je ne vois pas le commit d52 dans l'historique
+
+# Créez une branche "detached" sur le commit actuel
+git checkout -b detached
+
+# Poussez la branche "detached" sur GitHub
+git push origin detached
+
+

@@ -1,0 +1,64 @@
+1)
+echo "Sami Tchebibi">> CONTRIBUTORS.md
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
+
+rhi: ok
+
+2)
+git add Commands.txt
+git commit -m "C2"
+git add Commands.txt
+git commit -m "C3"
+git push
+
+rhi: ok
+
+3)
+git branch dev
+git switch dev
+echo >>requirements.txt
+git add requirements.txt
+git commit -m "C31"
+git add requirements.txt
+git commit -m "C32"
+git push
+
+rhi: ok (fortnite ? sérieux ? ;-D .. .et c'est 'pandaS' ! pas 'panda')
+                                                     ^
+
+
+4)
+git switch main
+echo >> package.json
+git add package.json
+git commit -m "C4"
+git merge dev -m "C5"
+git push
+
+rhi: oui ! mais je ne retrouve pas la trace de ces commandes dans l'historique, dommage.
+
+5)
+git add requirements.txt
+git commit -m "C6"
+git checkout cb35bf0
+echo "t'as les crampté ???">>MANIFEST.xml
+
+rhi: :-)
+
+git add MANIFEST.xml
+git commit -m "D51"
+git add MANIFEST.xml
+git commit -m "D52"
+git branch "detached"
+git push origin HEAD:main
+
+6)
+git add Commands.txt
+git ci -m "Dernier commit"
+git push
+
+
+rhi: ok pour la fin bien joué, dommage de pas avoir correctement mergé dev dans main
+

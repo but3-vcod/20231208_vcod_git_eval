@@ -1,0 +1,88 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push
+
+> rhi: commandes ok
+>      historique ok
+
+### 2- Configuration
+
+git config --local alias.s "status -s"
+git config --local alias.l "log --graph --oneline"
+git config --local alias.ci "commit"
+git config --local alias.br "branch"
+git add Commands.txt
+git commit -m "C2"
+git push
+
+git config --local user.name "Cyprien Pascal"
+git config --local user.email "cyprien31pascal@gmail.com"
+git add Commands.txt
+git ci -m "C3"
+git push
+
+> rhi:  ok pour les commandes   x2
+>       ok pour l'historique     x2
+
+### 3- Branche 'DEV'
+
+git br "DEV"
+git switch DEV
+git add requirements.txt
+git ci -m "C31"
+git add requirements.txt
+git ci -m "C32"
+git push --set-upstream origin DEV
+
+> rhi:  ok pour les commandes 
+>       ok pour l'historique
+
+### 4- Merge
+
+git switch main
+git add package.json
+git ci -m "C4"
+git merge DEV -m "C5"
+git push
+
+> rhi:  ok pour les commandes x2
+>       ok pour l'historique x2
+
+### 5- Detached HEAD
+
+git add requirements.txt
+git ci -m "C6"
+git checkout 3ec0305
+git add MANIFEST.xml
+git ci -m "D51"
+git add MANIFEST.xml
+git ci -m "D52"
+git branch "detached"
+
+> rhi:  on ne retrouve pas de commit "C6"  dans l'historique
+>       D51 et D52 figurent bien dans l'historique et les
+>       commandes sont bonnes
+>       malheureusement, pas de branche "detached"
+
+git push origin HEAD:main
+
+> rhi: c'est à cause de cette derniére commande qui met HEAD
+>      sur la branch "main"  sur le dépôt distant (github)
+>      peut être que vous aviez le bon historique sur votre
+>      dépôt local, mais je ne peux pas le savoir.
+
+###6 push commands
+
+git add Commands.txt
+git ci -m "Dernier commit"
+git push

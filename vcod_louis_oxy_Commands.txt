@@ -1,0 +1,80 @@
+Bonjour, ne prennez pas en compte le gitk svp, j'ai pleuré 3/4 du contrôle.
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+> rhi: beaucoup de choses dans ce fichier mais rien dans
+> l'historique, c'est dommage
+
+
+### 1- Essai de 'PR' 
+echo "Louis Lambert">> CONTRIBUTORS.md
+git commit -m "C1"
+git push
+
+> rhi: on ne retrouve pas le Commit C1 dans l'historique.
+>
+
+### 2- Configuration
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.l "log --graph --oneline"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
+
+git add Commands.txt
+git commit -m "C2"
+
+git config --global user.name "Louis Lambert"
+git config --global user.email "louislambert2000@hotmail.com"
+
+git add Commands.txt
+git commit -m "C3"
+git push
+git add requirements.txt
+git ci -m "C32"
+git push
+
+> rhi: ok  pour les commandes, mais pas de commit dans
+> l'historique
+
+### 3- Branche 'DEV'
+git br dev
+git switch dev
+echo >>requirements.txt
+git add requirements.txt
+git ci -m "C31"
+modifier
+git ci -m "C32"
+git push
+
+> rhi: ok commande branch
+
+### 4- Merge
+git switch main
+git add package.json
+git ci -m "C4"
+git merge DEV -m "C5"
+git push
+
+> rhi: ok commande merge
+
+### 5- Detached HEAD
+git ci -m "C6"
+git log  
+git reset --hard C5_ID
+git ci -m "D51"
+git ci -m "D52"
+git checkout -b detached HEAD
+git push
+
+
+### 6
+git add Commands.txt
+git ci -m "Dernier commit"
+git push
+
+
+

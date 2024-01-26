@@ -1,0 +1,125 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+git clone git@github.com:Nicopras720295/20231208_vcod_git_eval.git vcod
+cd vcod
+git add CONTRIBUTORS.md
+git commit -m "C1"
+git push --all
+
+rhi: ok c1
+
+### 2- Configuration
+
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.l "log --graph --oneline"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
+
+rhi: ok aliases
+
+git add Commands.txt
+git commit -m "C2"
+
+rhi: ok
+
+
+git config --global user.name "Nicopras720295"
+git config --global user.mail "nicolas.dembele72@gmail.com"
+
+git add Commands.txt
+git commit -m "C3"
+
+### 3- Branche 'DEV'
+1- créez une branche nommée 'DEV'
+git checkout -b DEV
+
+2- créez un fichier requirements.txt (sans contenu)
+echo >>requirements.txt
+
+3- commitez le avec le message "C31"
+git add requirements.txt
+git commit -m "C31"
+
+
+4-remplir le fichier avec 3 dépendances
+echo evaluationgit > requirements.txt
+echo evaluationgit > requirements.txt
+echo evaluationgit > requirements.txt
+
+5-commitez une nouvelle fois (toujours dans 'DEV') avec le message "C32"
+git add requirements.txt
+git commit -m "C32"
+
+rhi: ok  branches , c31 , c32
+
+6-poussez sur github et ouvrez une nouvelle 'PR'
+git push origin DEV
+
+### 4- Merge
+1-sur la branche 'main' créez un nouveau fichier 'package.json'
+git checkout main
+echo >>package.json
+
+2-commitez le avec le message "C4"
+git add package.json
+git commit -m "C4"
+
+
+3-mergez la branche 'DEV' dans la branch 'main' avec le message de commit "C5"
+git merge DEV
+git commit -m "C5"
+
+
+rhi: alors  c'est dommage, on passe à côté d'un sans faute
+de justesse :-) mais le merge avec message c'est pas tout à
+fait ça:
+
+    git merge DEV -m  "C5"
+
+
+4-poussez sur github et ouvrez une nouvelle 'PR'
+git push origin main
+
+
+### 5- Detached HEAD
+1- rajouter une dépendance dans "requirements.txt"
+
+
+2- commiter avec le message "C6" sur la branche 'main'
+git checkout main
+git add requirements.txt
+git commit -m "C6"
+
+
+3- positionnez HEAD sur le commit "C5"
+git log
+git checkout 43a553a2f736caf2d813581968a7feb6b43432b0
+
+4- rajoutez le fichier MANIFEST.xml avec un contenu de votre choix
+echo >>MANIFEST.xml
+
+
+5- commiter avec le message "D51"
+git add MANIFEST.xml
+git commit -m "D51"
+
+6- refaire un autre commit avec le message "D52"
+git commit -m "D52"
+
+7- créer une branche "detached" sur ce commit
+git checkout -b detached
+
+
+
+8- poussez sur github et ouvrez une dernière 'PR'
+git push origin detached
+
+
+rhi: Tout le reste est bon, bravo !

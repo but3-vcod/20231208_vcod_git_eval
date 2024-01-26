@@ -1,0 +1,66 @@
+# Commandesq
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+echo  "victor Patfoort" >> CONTRIBUTORS.md
+
+git add CONTRIBUTORS.md
+
+git commit -m "C1"
+### 2- Configuration
+
+git config --global alias.s "status -s"
+git config --global alias.l "log --graph --oneline"
+git config --global alias.ci "commit"
+git config --global alias.br "branch"
+
+
+git config --global user.name "VotreNomUtilisateur"
+git config --global user.email "votre@email.com"
+
+
+### 3- Branche 'DEV'
+git branch dev
+echo >> requirements.txt
+git ci -m “C31”
+git add requirements.txt
+git ci -m "C32"
+
+rhi: ça marche pas, il aurait fallut se déplacer dans dev
+rhi: avant de commiter , `git switch DEV`, ou bien faire la
+rhi: commande `git co -b DEV`
+rhi: bizzarement il y a quand même un commit C32 dans dev
+...
+
+### 4- Merge
+git switch main
+echo >> package.json
+git add package.json
+git ci -m "C4"
+git merge dev -m "C5"
+
+rhi: ok pour les commandes et avec un historique conforme
+
+### 5- Detached HEAD
+git ci -m "C6"
+git checkout e83985a
+echo "hello word" >> MANIFEST.xml
+git add MANIFEST.xml
+git ci -m "D51"
+git branch detached
+git push origin HEAD:main
+
+rhi: plutôt ok pour les commandes, mais çà ne se reflète pas
+rhi: dans l'historique
+
+
+### 6- Commiter et pusher le fichier Commands.txt
+git add Commands.txt
+git ci -m "Dernier commit"
+git push
+ouvrir la derniére 'PR'

@@ -1,0 +1,74 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+1.Ajouter mon nom sur contributors.md
+git add CONTRIBUTORS.md
+2.git commit -m "C1"
+3.git push
+
+> rhi: pas de commit C1 ...
+
+### 2- Configuration
+git config --local alias.s "status -s"
+git config --local alias.l "log --graph --oneline"
+git config --local alias.ci "commit"
+git config --local alias.br "branch"
+git add Commands.txt
+git commit -m "C2"
+git push
+
+> rhi: ok pour les commandes alias
+>      mais pas de commit C2
+
+### 3- Branche 'DEV'
+git branch "Dev"
+echo  >> requirement.txt ou
+Créer le fichier requierement.txt manuellement
+git commit -m "C31"
+git add requirements.txt
+git commit -m "C32"
+git push 
+
+> rhi: ok branch DEV
+>      pas de commit C31 ou C32 sur cette branche
+
+### 4- Merge
+git switch main
+echo >> package.json
+ou créer manuellement moi je le fais manuellement
+git add package.json
+git commit -m "C4"
+git merge Dev -m "C5"
+git push
+
+> rhi: ok commit C4
+>      pas de merge de dev ni de commit C5
+
+### 5- Detached HEAD
+Modif fichier requierements.txt 
+git add requierements.txt
+git commit -m "C6"
+git checkout 1bd2bef
+git add MANIFEST.xml
+git commit -m "D51"
+git add MANIFEST.xml
+git ci -m "D52"
+git branch "detached"
+git push 
+
+> rhi: ok commit C6, D51  et branche  detached
+>      mais commit D52 pas sur la branch detached
+
+### 6- Commiter et pusher le fichier Commands.txt
+
+git add Commands.txt
+git commit -m "Dernier commit"
+git push
+
+> rhi: ok "Dernier Commit"

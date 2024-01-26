@@ -1,0 +1,145 @@
+# Commandes
+Évaluation git pour les but3 vcod
+
+### Règles du jeu
+
+Pour chaque commande git que vous exécutez, collez la dans un fichier "Commands.txt" que vous commiterez tout à la fin 
+
+
+### 1- Essai de 'PR' 
+
+### 2- Configuration
+echo "Chrys Massamba">> CONTRIBUTORS.md
+git clone https://github.com/CHRRRRRRrrrrrrr/20231208_vcod_git_eval.git
+git commit -m "C1"
+git push 
+
+> rhi: ok pour tout
+
+
+### 2- Configuration
+git config --get-regexp alias.s "status -s"
+git config --get-regexp alias.l "log --graph --oneline"
+git config --get-regexp alias.ci "commit"
+git config --get-regexp alias.br "branch"
+
+git add Commands.txt
+git commit -m "C2"
+
+git config --global user.name "CHRRRRRRrrrrrrr"
+git config --global user.email "chrysmass09gmail.com"
+
+> rhi: ok,
+
+git add Commands.txt
+git commit -m "C2"
+
+> rhi: mais je ne vois pas de commit "C2" dans l'historique.
+>     peut être qu'il n'y a pas eu de modification du fichier.
+>     dommage.
+
+
+git config --global user.name "CHRRRRRRrrrrrrr"
+git config --global user.email "chrysmass09gmail.com"
+
+> rhi: ok pour les commande
+
+git branch dev
+echo  >> requirement.txt 
+git add requirements.txt
+git ci -m “C31”
+
+> rhi: ces commandes devraient figurer dans la section 3
+>      ce qui explique que le commit C31 ne figure pas dans
+>      l'historique
+
+git config --get-global alias.s "status -s" 
+git config --get-global alias.l "log --graph --oneline"
+git config --get-global alias.ci "commit"
+git config --get-global alias.br "branch"
+
+> rhi: ok pour les commandes
+
+git add Commands.txt
+git commit -m "C2"
+git add
+git add Commands.txt
+git commit -m "C3"
+git push
+
+> rhi: ok pour les commandes
+>      malheureusement, les commits "C2" et "C3" ne figurent
+>      pas dans l'historique. 
+
+### 3- Branche 'DEV'
+git switch dev
+echo >>requirements.txt
+git add requirements.txt
+git commit -m "C31"
+git add requirements.txt
+git commit -m "C32"
+git push
+
+
+### 4- Merge
+<<<<<<< Updated upstream
+git switch main
+echo >> package.json
+=======
+git switch dev
+echo >>requirements.txt
+> rhi: pas sûr que ça modifie requirements.txt
+git add requirements.txt
+git commit -m "C31"
+> rhi: il faut modifier requirements.txt avant
+git add requirements.txt
+git commit -m "C32"
+git push
+
+> rhi: ok pour les commandes
+>      malheureusement, les commits "C31" et "C32" ne
+>      figurent pas dans l'historique. 
+>      ok pour la création d'une branche dev
+
+
+### 4- Merge
+git switch main
+echo >> package.json
+> rhi: pas sûr que ça modifie package.json
+>>>>>>> Stashed changes
+git add package.json
+git ci -m "C4"
+git merge DEV -m "C5"
+git push
+<<<<<<< Updated upstream
+=======
+
+> rhi: ok pour les commandes, qui se retrouvent dans
+>      l'historique
+>>>>>>> Stashed changes
+
+### 5- Detached HEAD
+git add requirements.txt
+git ci -m "C6"
+<<<<<<< Updated upstream
+=======
+
+> rhi:  on ne trouve pas de commit  "C6" dans l'historique
+>
+
+git checkout 17cea4e53058942dcbf4de1786b1a0e6c7cb19da 
+
+git add MANIFEST.xml
+git ci -m "D51"
+
+
+git add MANIFEST.xml
+git ci -m "D52"
+git branch "detached"
+git push origin HEAD:main
+
+
+> rhi: ok pour les commandes
+>      ok pour la branche detached qui commence au commit C5
+>      mais on ne retrouve pas dans l'historique les
+>      commits "C6", "D51" et "D52"
