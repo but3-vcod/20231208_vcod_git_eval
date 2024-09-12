@@ -1,7 +1,7 @@
 # 20231210_vckd_git_eval
 Évaluation git pour les but3 vcod
 
-### Règles du jeu
+### REGLES DU JEU
 
 1. l'épreuve dure 1h15
 1. une bonne réponse rapporte 1pt
